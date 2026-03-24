@@ -1,4 +1,25 @@
-# Wallpaper Engine Workshop Downloader
+# [PR] Wallpaper Engine Workshop Downloader 
+
+## WIP (Work In Progress)
+I’ve looked into the code of the `select_save_location()` function and I have a suggestion to avoid stupid errors:
+
+Currently, the script checks if the selected folder contains `\projects\myprojects`. If the user selects the final folder directly (by mistake... *cough* happened to me), the script fails. 
+
+I'm refactoring the code to make it smarter and more robust.
+
+### What I'm working on:
+
+- **Smart Path Detection**: The script now detects if it is already in a sub-folder (like `myprojects`) and adapts itself automatically instead of just blocking with an error message.
+- **Smart Permissions Check**: I've added a dedicated function to test write access. The script only warns you if it actually lacks permissions, instead of asking for Admin rights for no reason.
+- **Typo Fixes**: 
+    - `Invaild` -> `Invalid`
+    - `is not exist` -> `does not exist` (in the `run_command` function)
+
+### Next Steps:
+- [ ] **Folder Renaming**: Implement a post-download logic that reads `project.json` to rename the numbered folders (e.g., `12345678`) into the actual Wallpaper title.
+- [ ] **Filename Sanitization**: Add a function to clean illegal Windows characters from titles.
+
+---
 
 [中文](README_zh.md)
 
