@@ -13,7 +13,7 @@ def run_command(pubfileid):
         printlog("Error: Save location is not set correctly.\n")
         return
     if not os.path.isdir(save_location):
-        printlog("Error: Save location is not exist.\n")
+        printlog("Error: Save location does not exist.\n")
         return
     target_directory = os.path.join(save_location, "projects", "myprojects")
     if not os.path.isdir(target_directory):
@@ -60,7 +60,7 @@ def select_save_location():
     selected_directory = filedialog.askdirectory()
     target_directory = os.path.join(selected_directory, "projects", "myprojects")
     if not os.path.isdir(target_directory):
-        printlog("Invaild save location: Selected directory does not contain \projects\myprojects\n")
+        printlog("Invalid save location: Selected directory does not contain \projects\myprojects\n")
     else:
         printlog(f"Path set to {selected_directory}\n")
         global save_location
