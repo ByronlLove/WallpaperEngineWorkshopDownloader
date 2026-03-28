@@ -9,7 +9,7 @@ I'm refactoring the code to make it smarter and more robust.
 
 ### What I'm working on:
 
-- **Smart Path Detection**: The script now detects if it is already in a sub-folder (like `myprojects`) and adapts itself automatically instead of just blocking with an error message.
+- **Smart Path Detection**: The script detects if it is already in a sub-folder (like `myprojects`) and adapts itself automatically instead of just blocking with an error message.
 - **Improved Write Access (Feature for Mojalu75)**: I've added a dedicated function to test write access. The script only warns you if it actually lacks permissions, instead of asking for Admin rights for no reason.
 - **Typo Fixes**: 
     - `Invaild` -> `Invalid`
